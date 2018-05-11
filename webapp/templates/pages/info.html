@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    	<meta http-equiv="refresh" content="2">#}
+    <title>datainfo</title>
+    <script type="text/javascript" src={%  static "js/jquery.js"%}></script>
+    <script type="text/javascript" src={% static "js/datainfo.js" %}></script>
+    <link rel="stylesheet" href={% static "style/datainfo.css" %}>
+</head>
+<body>
+<div id="inner">
+    <header id="header">
+        <div id="ad"><img src={% static "img/banner/timg.jpg" %}></div>
+        <div  id="topbar" >
+            {% csrf_token %}
+            <img src= {{img}}  alt="登陆的头像" id="headp">
+            <div id="name">{{ usr }}</div>
+            <ul id="list">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">自分组</a></li>
+                <li><a href="#">县/区</a></li>
+                <li><a href="#">市级</a></li>
+                <li><a href="#">省级</a></li>
+                <li><a href="#">{{ ob }}</a></li>
+                <li><a href="#">{{ rg }}</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <div contenteditable="true" id="text"></div>
+        <div id="items">
+            <ul>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+                <li><span></span>
+                    <div class="change">管理</div>
+                    <div class="delet">删除</div>
+                </li>
+            </ul>
+        </div>
+        <div id="pages">
+            <a href="#"><<---上一页</a>
+            <div id="pbox">
+                <div class="pg">第2页</div>
+                <div class="pg">共4页</div>
+            </div>
+            <a href="#">下一页--->></a>
+        </div>
+    </div>
+    <footer id="footer">
+        <div>微信号:火萨萨</div>
+        <div>版权@th--2017/11/12-2018/2/2</div>
+        <div class="wximg"><img src={%static "img/background/wx.png" %} alt=""></div>
+    </footer>
+</div>
+
+</body>
+</html>

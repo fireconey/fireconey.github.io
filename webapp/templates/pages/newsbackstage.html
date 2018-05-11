@@ -1,0 +1,72 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="refresh" content="2"> -->
+	<title>Document</title>
+	<script type="text/javascript" src={%static "js/jquery.js"%}></script>
+	<script type="text/javascript" src={%static "js/local.js"%}></script>
+	<script type="text/javascript" src={%static "js/newsbackstage.js"%}></script>
+	<link rel="stylesheet" href={% static "style/newsbackstage.css"%}>
+</head>
+<body>
+	<div id="container">
+		{% include "model/head.html" %}
+		<div id="inner">
+			<div id="edite">
+				<div id="time">
+					留存时间：
+					<input type="text" class="time" value={{ day }}>天
+					<input type="text" class="time" value={{ h }}>时
+					<input type="text" class="time" value={{ m }}>分
+				</div>
+				<div type="text" id="loc">
+					<select name="select" id="select">
+						<option value="0" selected="selected">自分组</option>
+						<option value="1">县/区级</option>
+						<option value="2">市级</option>
+						<option value="3">省级</option>
+					</select>
+					<input type="text" id="group" value={{ loc }} >
+				</div>
+				<div id="font">
+					<ul>
+						<li><img src={%static "img/edite/left.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/middle.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/right.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/B.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/color.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/big.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/small.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/back.jpg"%} alt=""></li>
+						<li><img src={%static "img/edite/img.jpg"%} alt=""></li>
+						<li id="submit"><input type="button" value="上传"></li>
+						<li><img src={%static "img/edite/undo.jpg"%} alt=""></li>
+
+						<input type="file" id="file" >
+						{% include "model/colorpicker.html" %}
+					</ul>
+				</div>
+			</div>
+			<input type="text"  id="title"  value={{title}}>
+			<div class="imgsize">
+				<div>请输入尺寸</div>
+				宽<input type="text">px
+				 高<input type="text">px
+				 <input type="button" value="修改" id="changeimgsize">
+				</div>
+			<div contenteditable="true" id="content" >
+				{{ content|safe }}
+			</div>
+			
+			<div id="button">
+				<a  id="yes"  class="button">{{button}}</a>
+				<a href="index"  id="cancel" class="button">取消</a> 
+			</div>
+			
+		</div>
+        {% include "model/footer.html" %}
+	</div>
+</body>
+</html>

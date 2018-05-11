@@ -1,0 +1,248 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body{
+
+background-color: rgba(211,211,211,0.5);
+	
+
+}
+
+#inner{
+	width:80%; 
+	min-width: 850px;
+	margin:auto;
+
+	
+}
+#header{
+	width:100%;
+	height:23.4%;
+	box-shadow: 5px 5px 3px #8F8F8F;
+}
+#ad{
+	height:80%;
+	width:100%;
+	background:yellow;
+}
+#ad img{
+	height: 100%;
+	width: 100%;
+}
+#topbar{
+	height:20%;
+	width:100%;
+	background-color: rgba(34,139,34,1);
+	position: relative;
+}
+#topbar img{
+	height:100%;
+	border-radius:50%;
+	float:left;
+	margin-left:4%;
+}
+
+#topbar #name{
+
+	margin-top:2.5%;
+	margin-left: 1%;
+	color:#FFF;
+	float:left;
+}
+
+#topbar ul{
+	float:left;
+	width: 85%;
+	height:60%;
+	margin: auto;
+	margin-top:2%;
+	float: left;
+	/*background: blue;*/
+	padding-left:5%;
+}
+
+#topbar ul li{
+	height:100%;
+	width:14.2% ;
+	/*background: red;*/
+	list-style:none;
+	float:left;
+}
+
+#topbar ul li a{
+	display: block;
+	text-decoration:none;
+	font-size: 17px;
+	color:#FFF;
+}
+#topbar input[name="mark"]{
+	display: none;
+	background: red;
+}
+
+
+/************------内容开始-------**************/
+
+#content{
+	position: relative;
+ 	border: 1px solid #CCC;
+	width: 100%;
+	height:56.1%;
+	margin-top: 1%;
+	background: #FFF;
+	/*background-color: rgba(42,41,46,0.1);*/
+	padding-top:1%; 
+	box-shadow: 5px 5px 3px #8F8F8F;
+	/*border:0.5px solid black /*rgba(192,192,192,1)*/
+	 /*border:1px solid red!important;*/
+
+}
+
+#toback{
+	margin-top:30%;
+	float: left;
+	width:10%;
+	height:40%;
+}
+#toback a{
+	text-decoration: none;
+	margin-top:2%;
+	display: block;
+	width: 100%;
+	height: 15%;
+	color:#FFF;
+	padding-top:6%;
+	background: green;
+
+}
+#content #im{
+position: absolute;
+	left:45% ;
+	top:1px ;
+	width:10%;
+	border-radius:50% 
+	/*background: yellow;*/
+}
+
+#xinyong {
+	width: 100%;
+	height: 11.5%;
+	margin-top: 1%;
+	background: green;
+
+}
+#xinyong .pricename{
+	color:red;
+	float: left;
+	padding-top:3%;
+	text-align:center;
+	font-size: 1.2em;
+	width:6%;
+	height: 100%;
+	margin-left:5%;
+	background:yellow;
+}
+#xinyong #pricebox{
+	float: left;
+	width:20% ;
+	padding-left:2%;
+	height:100%;
+	background: #CCC;
+	color:green;
+
+}
+#im #file{
+	display: none;
+}
+
+#im img{
+	width:100%;
+	height:100%;
+	border:1px solid #CCC;
+	border-radius:50%;
+
+}
+
+#im #submit{
+	display: block;
+	display:none;
+	background:red;
+	color: #FFF;
+	width:100%;
+	height:100%; 
+	border-radius:50%;
+}
+
+#content #fo{
+	display: block;
+	/*background-color: rgba(34,139,34,1);*/
+	border-top:1px solid green;
+	margin:auto;
+	margin-top:5%;
+	width: 40%;
+	height:70%;
+	padding-right:3%; 
+	/*background: yellow;*/
+}
+
+#content #fo label{
+	height:5%; 
+	margin-left:3%;
+	font-size:1.1em;
+	color:green;
+}
+#fo div{
+	height:80%;
+	/*background: red; */
+}
+ #fo div input{
+	margin-top:4%;
+	height:11%;
+	width:80%; 
+	font-size: 1em;
+	color: red;
+	border-style: none;
+	/*border:1px dashed green;*/
+	/*color:#ccc;*/
+}
+#content #fosubmit{
+	 background:green; 
+	 color:#FFF!important;
+	 display: block;
+	 float:right;
+	 width:30%!important; 
+	 margin-right:30%;
+	 border-radius:7px; 
+	 height:10%; 
+	 margin-top:10%!important;
+  } 
+
+#footer{
+    margin-top: 1%;
+	clear:both;
+	height:18.7%;
+	width:100%;
+	color:#FFF;
+	background:green!important;
+	/*border:1px solid rgba(192,192,192,1);*/
+	box-shadow: 5px 5px 3px #8F8F8F;
+}
+
+#footer div
+{   
+	padding-top:0.5%; 
+	text-align: center;
+	margin:auto;
+	/*background: red;*/
+}
+#footer .wximg{
+	margin-top:1%;
+	height:60%; 
+}
+.wximg img{
+	width:15%;
+	height:100%;  
+}

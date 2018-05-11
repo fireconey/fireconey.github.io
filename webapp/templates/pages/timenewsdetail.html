@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    <meta http-equiv="refresh" content="3">#}
+    <link rel="stylesheet" href={% static "style/timenewsdetail.css" %}>
+    <script src={% static "js/jquery.js" %}></script>
+    <script type="text/javascript" src={% static "js/timenewsdetail.js" %}></script>
+    <title>timenews</title>
+
+</head>
+<body>
+    <div id="inner">
+        <header id="header">
+            <div id="ad"><img src={% static "/img/banner/timg.jpg" %}></div>
+            <form action="/topbar" id="topbar">
+                {% csrf_token %}
+                <img src={{ initimg }} alt="登陆的头像" id="headp">
+                <div id="name">{{ initusr }}</div>
+                <ul id="list">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">自分组</a></li>
+                    <li><a href="#">县/区</a></li>
+                    <li><a href="#">市级</a></li>
+                    <li><a href="#">省级</a></li>
+                    <li><a href="#">{{ ob }}</a></li>
+                    <li><a href="#">{{ rg }}</a></li>
+                </ul>
+                <input type="submit" name="mark" value="img">
+            </form>
+        </header>
+        <div id="content">
+            <div id="otherinfo">
+                <div class="usrxy" id="person">
+                 <div id="usr" class="usrname" >{{ name }}</div>
+                 <div>好评{{ goodperson }}/差评{{ badperson }}</div>
+                 <div>信用{{personxy}}</div>
+             </div>
+                <img src={{ img }} alt="空" id="img2">
+                <div class="usrxy">
+                 <div id="usr" class="usrname">{{ title }}</div>
+                 <div>好评{{ good }}/差评{{ bad }}</div>
+                 <div>信用{{xinyong}}</div>
+             </div>
+         </div>
+         <div id="usrinfo">
+            <div id="title">
+                {{ title }}
+            </div>
+            <div id="ct" >
+                {{ content|safe }}
+            </div>
+            <div id="call">
+                电话:{{ phone }}微信:{{ wx }}
+            </div>
+        </div>
+    </div>
+
+    <div id="eva">
+        <div id="box">
+            <div class="evamanager"> 评论 </div>
+            <div class="evamanager">好评</div>
+            <div class="evamanager">差评</div>
+            <div class="evamanager">全部</div>
+        </div>
+        
+        <div id="othereva">
+           <ul class="ul">
+            <li class="li1 li"><img src="static/img/loading.jpg" alt="浮动">
+                <div class="othername">th</div>
+            </li>
+            <li class="li2 li">
+                ****************************************************************************************************
+            </li>
+        </ul>
+    </div>
+    <div id="toeval">
+       <textarea name="text" id="text" cols="30" rows="10"></textarea>
+       <div id="score">
+        好评<input type="radio" name="radio" value=1 checked="checked">
+        差评<input type="radio" name="radio" value=0>
+       </div>
+         <div class="action">提交</div>
+        <div class="action">取消</div>
+       
+    </div>
+</div>
+
+<footer id="footer">
+    <div>电话：13957613802</div>
+    <div>版权@13957613802</div>
+</footer>
+</div>
+</body>
+</html>
